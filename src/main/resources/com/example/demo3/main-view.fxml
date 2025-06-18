@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="mainPane" prefHeight="720.0" prefWidth="1280.0" styleClass="main-view-bg" stylesheets="@styles/styles1.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.MainViewController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="80.0" spacing="10.0" styleClass="top-nav-bar" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Shopping Cart Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="🛒" />
+                            <Label text="Cart" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Sell Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="💰" />
+                            <Label text="Sell" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Products Button -->
+                <Button onAction="#handleShowProducts" mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="📦" />
+                            <Label text="Products" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- History Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="📜" />
+                            <Label text="History" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Clients Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="👥" />
+                            <Label text="Clients" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Suppliers Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="🚚" />
+                            <Label text="Suppliers" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Settings Button -->
+                <Button mnemonicParsing="false" styleClass="nav-button">
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Text styleClass="nav-icon" text="⚙" />
+                            <Label text="Settings" styleClass="nav-button-text" />
+                        </VBox>
+                    </graphic>
+                </Button>
+
+                <!-- Spacer -->
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Date and Time -->
+                <VBox alignment="CENTER_RIGHT">
+                    <children>
+                        <Label fx:id="dateLabel" styleClass="datetime-label" text="DD/MM/YYYY" />
+                        <Label fx:id="timeLabel" styleClass="datetime-label" text="HH:MM:SS" />
+                    </children>
+                </VBox>
+
+                <!-- User Button -->
+                <Button fx:id="userButton" mnemonicParsing="false" styleClass="user-button" text="User" />
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets left="50.0" right="50.0" top="30.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label fx:id="welcomeLabel" styleClass="welcome-label" text="Welcome back, USER!" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <VBox styleClass="stat-card-large">
+                            <children>
+                                <Label styleClass="stat-card-title" text="Today's profit" />
+                                <Label styleClass="stat-card-value" text="999999 DA" />
+                            </children>
+                        </VBox>
+                        <VBox styleClass="stat-card-large">
+                            <children>
+                                <Label styleClass="stat-card-title" text="This month" />
+                                <Label styleClass="stat-card-value" text="999999 DA" />
+                            </children>
+                        </VBox>
+                        <VBox styleClass="stat-card-large">
+                            <children>
+                                <Label styleClass="stat-card-title" text="Today's total quantity" />
+                                <Label styleClass="stat-card-value" text="999999" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <VBox alignment="CENTER" styleClass="stat-card-yellow">
+                            <children>
+                                <Label styleClass="stat-card-small-title" text="Low Stock Products" />
+                                <Label styleClass="stat-card-yellow-value" text="99" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="stat-card-orange">
+                            <children>
+                                <Label styleClass="stat-card-small-title" text="Sold Out Products" />
+                                <Label styleClass="stat-card-orange-value" text="99" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="stat-card-red">
+                            <children>
+                                <Label styleClass="stat-card-small-title" text="Expired Products" />
+                                <Label styleClass="stat-card-red-value" text="99" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

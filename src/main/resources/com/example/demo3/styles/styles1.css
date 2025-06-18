@@ -1,0 +1,200 @@
+/* --- General Window --- */
+.root {
+    -fx-background-color: #f4f7f9; /* Light grey for login background */
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- ================================== --- */
+/* --- Main Dashboard Styles (New)      --- */
+/* --- ================================== --- */
+/* --- General Background --- */
+.main-view-bg {
+    -fx-background-color: #343a40; /* Dark grey background */
+}
+
+/* --- Top Navigation Bar --- */
+/* --- Top Navigation Bar --- */
+.top-nav-bar {
+    -fx-background-color: #495057; /* Slightly lighter grey for nav */
+    -fx-padding: 10px 20px; /* Add padding for spacing */
+}
+
+.nav-button-icon {
+    -fx-background-color: transparent;
+    -fx-font-size: 24px; /* Increase icon size */
+    -fx-text-fill: #ffffff; /* Change icon color to white */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.2), 5, 0, 0, 2);
+}
+.nav-button-icon:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.4), 10, 0, 0, 3);
+}
+
+.nav-button {
+    -fx-background-color: white;
+    -fx-text-fill: black; /* Light grey text */
+    -fx-font-size: 12px; /* Smaller font size for text under icons */
+    -fx-font-weight: bold;
+    -fx-padding: 10px; /* Add padding for spacing */
+    -fx-alignment: CENTER; /* Center alignment for both icon and text */
+    -fx-cursor: hand;
+    -fx-padding: 20px;
+          -fx-background-radius: 10px;
+          -fx-pref-width: 100px;
+          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+}
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.2), 5, 0, 0, 2);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.nav-button-selected {
+    -fx-background-color: #007bff; /* Blue for selected button */
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.5), 10, 0, 0, 3);
+}
+
+.nav-icon {
+    -fx-font-size: 24px; /* Larger icon size */
+    -fx-text-fill: #ffffff; /* White color for icons */
+}
+
+.datetime-label {
+    -fx-text-fill: #ced4da; /* Light grey text */
+    -fx-font-size: 14px;
+}
+
+.user-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 25px; /* Rounded corners */
+    -fx-padding: 10px 20px; /* Increased padding for a larger button */
+    -fx-cursor: hand;
+}
+.user-button:hover {
+    -fx-background-color: #5a6268;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+/* --- Main Content Area --- */
+.welcome-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f8f9fa; /* White text */
+}
+
+.stat-card-large {
+    -fx-background-color: white; /* White background for the card */
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 300px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.stat-card-large:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 5);
+}
+.stat-card-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #6c757d; /* Grey color for the title */
+}
+.stat-card-value {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529; /* Dark color for the value */
+    -fx-padding: 10px 0 0 0;
+}
+
+.stat-card-small {
+    -fx-padding: 15px;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 200px;
+    -fx-alignment: center;
+    -fx-transition: all 0.2s ease-in-out;
+}
+.stat-card-small:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+.stat-card-small-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529; /* Dark text for contrast */
+}
+.stat-card-small-value {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* White text for better visibility */
+}
+
+/* Specific colors for small stat cards */
+.stat-card-yellow {
+  -fx-background-color: white; /* White background for the card */
+      -fx-padding: 20px;
+      -fx-background-radius: 10px;
+      -fx-pref-width: 200px;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+      -fx-transition: all 0.2s ease-in-out;
+
+}
+.stat-card-orange {
+  -fx-background-color: white; /* White background for the card */
+      -fx-padding: 20px;
+      -fx-background-radius: 10px;
+      -fx-pref-width: 200px;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+      -fx-transition: all 0.2s ease-in-out;
+}
+.stat-card-red {
+  -fx-background-color: white; /* White background for the card */
+      -fx-padding: 20px;
+      -fx-background-radius: 10px;
+      -fx-pref-width: 200px;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+      -fx-transition: all 0.2s ease-in-out;
+}
+.stat-card-yellow-value{
+  -fx-font-size: 48px;
+    -fx-font-weight: bold;
+ -fx-text-fill: #ffc107;
+}
+.stat-card-orange-value{
+  -fx-font-size: 48px;
+    -fx-font-weight: bold;
+ -fx-text-fill:#fd7e14;
+}
+.stat-card-red-value{
+  -fx-font-size: 48px;
+    -fx-font-weight: bold;
+ -fx-text-fill:#dc3545;
+}
+
+.product-card {
+    -fx-background-color: white; /* White background */
+    -fx-padding: 15px;
+    -fx-background-radius: 10px;
+    -fx-pref-width: 200px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.product-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+}
+
+.product-card-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Blue text for titles */
+}
+
+.product-card-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d; /* Grey text for descriptions */
+}
+
+.product-card-price {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #28a745; /* Green text for prices */
+}

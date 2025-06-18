@@ -1,0 +1,289 @@
+/* --- Base styles copied from styles.css for consistency --- */
+.main-view-bg {
+    -fx-background-color: #343a40;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- ================================== --- */
+/* --- Products Page Specific Styles    --- */
+/* --- ================================== --- */
+
+/* --- Top control bar (add/delete buttons, search) --- */
+.products-top-bar {
+    -fx-background-color: #495057;
+    -fx-padding: 15px 20px;
+    -fx-spacing: 15px;
+}
+
+.products-button {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 8px;
+}
+.products-button:hover {
+    -fx-background-color: #d2d4d6;
+}
+
+.search-field {
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #bdc3c7;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 20px; /* Fully rounded */
+    -fx-border-color: transparent;
+    -fx-padding: 0 15px;
+}
+
+/* --- Table View Styles --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #495057;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #495057;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 45px;
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color: #343a40;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #e9ecef;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10px;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 10px;
+    -fx-text-fill: #f8f9fa; /* Light text for table content */
+    -fx-font-size: 14px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #3a4047;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #343a40;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #007bff;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .thumb {
+    -fx-background-color: #6c757d;
+}
+/* --- Sidebar Container --- */
+.sidebar {
+    -fx-background-color: #2b3035; /* Dark background for contrast */
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-radius: 10px; /* Rounded corners for a softer look */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Subtle shadow for depth */
+}
+
+/* --- Sidebar Labels --- */
+.sidebar-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white; /* Light text color */
+}
+
+/* --- Combo Boxes --- */
+.combo-box {
+    -fx-pref-width: 200px;
+    -fx-background-color: white; /* Dark gray background */
+    -fx-background-radius: 8px; /* Rounded corners */
+    -fx-padding: 8px 12px;
+    -fx-text-fill: black; /* Light text color */
+    -fx-font-size: 14px;
+}
+.combo-box:hover {
+    -fx-background-color: #5a6268; /* Slightly lighter on hover */
+}
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Transparent arrow button background */
+}
+.combo-box .arrow {
+    -fx-background-color: #e9ecef; /* White arrow */
+    -fx-shape: "M0 0 L5 5 L10 0 Z"; /* Custom arrow shape */
+}
+
+/* --- Separator Line (Optional) --- */
+.separator-line {
+    -fx-background-color: #495057; /* Dark gray line */
+    -fx-pref-height: 1px;
+    -fx-min-width: 100%;
+    -fx-max-width: 100%;
+}
+
+/* --- Buttons in Sidebar (Optional) --- */
+.sidebar-button {
+    -fx-background-color: #007bff; /* Blue button */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px; /* Rounded corners */
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand; /* Pointer cursor */
+}
+.sidebar-button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* --- ================================== --- */
+/* --- Add Product Dialog Styles (New)  --- */
+/* --- ================================== --- */
+
+.dialog-pane {
+    -fx-background-color: #495057;
+    -fx-border-color: #6c757d;
+    -fx-border-width: 1px;
+}
+
+.dialog-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding-bottom: 20px;
+}
+
+.dialog-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e9ecef;
+}
+
+.dialog-field {
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e0e5e9;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1.5px;
+}
+.dialog-field:focused {
+    -fx-border-color: #007bff;
+}
+
+/* Make DatePicker look like TextField */
+.dialog-field.date-picker .text-field {
+    -fx-background-color: #f8f9fa;
+}
+
+.dialog-cancel-btn {
+    -fx-background-color: #dc3545; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+.dialog-cancel-btn:hover {
+    -fx-background-color: #c82333;
+}
+
+.dialog-add-btn {
+    -fx-background-color: #28a745; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+.dialog-add-btn:hover {
+    -fx-background-color: #218838;
+}
+
+/* --- ================================== --- */
+/* --- Barcodes Dialog Styles (Updated) --- */
+/* --- ================================== --- */
+.add-barcode-btn {
+    -fx-background-color: white; /* White circle */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40; /* Dark plus sign */
+    -fx-background-radius: 50; /* Make it a circle */
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0 0 4px 0; /* Center the + vertically */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+.add-barcode-btn:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.remove-barcode-btn {
+    -fx-background-color: #dc3545; /* Red circle */
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50; /* Make it a circle */
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-padding: 0 0 2px 0; /* Center the X */
+    -fx-cursor: hand;
+}
+.remove-barcode-btn:hover {
+    -fx-background-color: #c82333;
+}
+
+/*
+ * This is the main rule. It finds a TableRow with our class,
+ * and then styles all the TableCells inside it.
+ * This is the correct and most stable way to do it.
+*/
+.table-row-cell {
+    -fx-background-color: transparent; /* Or your default cell color */
+}
+
+.table-row.highlighted-row > .table-cell {
+    -fx-background-color: #ffdddd; /* Your light red color */
+}
+
+/* Optional: Make it look better on hover */
+.table-row.highlighted-row:hover > .table-cell {
+    -fx-background-color: #ffcccc; /* Slightly darker red */
+}
+.table-row-cell.highlighted-row {
+    -fx-background-color: #ffdddd !important;
+    -fx-border-color: red !important;
+    -fx-border-width: 1px !important;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.table-row-cell.highlighted-row:hover {
+    -fx-background-color: #ffdddd !important;
+}
+
+.table-row-cell:focused.highlighted-row {
+    -fx-background-color: #ffdddd !important;
+}
+
+.highlighted-row {
+    -fx-background-color: #ffdddd !important;
+}

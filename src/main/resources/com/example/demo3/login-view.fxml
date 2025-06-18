@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.LoginController">
+
+    <!-- Login Card -->
+    <VBox fx:id="formContainer" alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-padding: 30px; -fx-background-radius: 15px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 12, 0, 0, 4);">
+
+        <HBox fx:id="topBar" alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 5px;">
+            <Label style="-fx-font-size: 24px; -fx-font-family: 'Segoe UI'; -fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Login Page" HBox.hgrow="ALWAYS" />
+            <Button onMouseClicked="#minimizeWindow" styleClass="minimize-btn" text="—" />
+            <Button onMouseClicked="#closeWindow" styleClass="close-btn" text="✕" />
+        </HBox>
+
+        <!-- Progress Indicator -->
+        <ProgressIndicator fx:id="progressIndicator" visible="false" />
+
+        <!-- Login Form -->
+        <GridPane alignment="CENTER" hgap="15" vgap="15">
+            <!-- Username Field -->
+            <TextField fx:id="usernameField" prefHeight="42.0" prefWidth="255.0" promptText="Username" styleClass="text-field" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+            <!-- Password Field with Toggle -->
+            <StackPane style="-fx-background-color: white; -fx-border-color: #ccd6dd; -fx-border-radius: 8px; -fx-background-radius: 8px;" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="password-field" visible="true" />
+                <TextField fx:id="passwordTextField" styleClass="text-field" visible="false" />
+                <Label onMouseClicked="#togglePasswordVisibility" style="-fx-cursor: hand; -fx-font-size: 18px; -fx-text-fill: #999; -fx-padding: 0 12 0 0;" text="👁" StackPane.alignment="CENTER_RIGHT" />
+            </StackPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" minHeight="30" prefHeight="40" />
+                <RowConstraints vgrow="NEVER" minHeight="30" prefHeight="40" />
+            </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="loginButton" onAction="#handleLogin" styleClass="login-btn" text="Login" />
+        <!-- Status Label -->
+        <Label fx:id="statusLabel" style="-fx-text-fill: #e74c3c; -fx-font-size: 14px;" />
+    </VBox>
+</VBox>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane styleClass="main-view-bg" stylesheets="@styles/styles2.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.ProductsViewController">
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="products-top-bar" BorderPane.alignment="CENTER">
+            <children>
+                <Button onAction="#handleShowAddProductDialog" mnemonicParsing="false" styleClass="products-button" text="Add">
+                    <graphic><Text text="➕" /></graphic>
+                </Button>
+                <Button fx:id="deleteButton" mnemonicParsing="false" styleClass="products-button" text="Delete">
+                    <graphic><Text text="🗑" /></graphic>
+                </Button>
+                <Button fx:id="confirmButton" mnemonicParsing="false" styleClass="products-button" text="Confirm" visible="false" managed="false">
+                    <graphic><Text text="✅" /></graphic>
+                </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" styleClass="products-button" text="Cancel" visible="false" managed="false">
+                    <graphic><Text text="❌" /></graphic>
+                </Button>
+                <Pane HBox.hgrow="ALWAYS" />
+                <TextField fx:id="nameSearchField" promptText="Search Name..." styleClass="search-field" />
+                <TextField fx:id="barcodeSearchField" promptText="Search Barcode..." styleClass="search-field" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="productsTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+                <TableColumn fx:id="barcodeColumn" text="Barcode" prefWidth="120" />
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="150" />
+                <TableColumn fx:id="qtyColumn" text="Quantity" prefWidth="80" />
+                <TableColumn fx:id="buyingPriceColumn" text="Buying Price" prefWidth="100" />
+                <TableColumn fx:id="unitPriceColumn" text="Unit Price" prefWidth="100" />
+                <TableColumn fx:id="price2Column" text="Price 2" prefWidth="100" />
+                <TableColumn fx:id="price3Column" text="Price 3" prefWidth="100" />
+                <TableColumn fx:id="expiryDateColumn" text="Expiry Date" prefWidth="120" />
+            </columns>
+
+        </TableView>
+    </center>
+    <right>
+        <VBox alignment="TOP_CENTER" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Filters Section -->
+                <Label styleClass="sidebar-label" text="Filters" />
+
+                <!-- Category Filter -->
+                <ComboBox promptText="Select Category" styleClass="combo-box" />
+
+                <!-- Separator Line -->
+                <Region styleClass="separator-line" VBox.vgrow="NEVER" />
+
+                <!-- Sort Section -->
+                <Label styleClass="sidebar-label" text="Sort By">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Sort Options -->
+                <ComboBox promptText="Select Option" styleClass="combo-box" />
+
+                <!-- Apply Button (Optional) -->
+                <Button text="Apply Filters" styleClass="sidebar-button">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
